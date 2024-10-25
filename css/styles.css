@@ -531,9 +531,6 @@ a {
   gap: 24px;
 }
 
-.label-footer {
-  display: none;
-}
 .footer-input {
   width: 264px;
   height: 40px;
@@ -555,6 +552,7 @@ a {
 .form-btm {
   min-width: 165px;
   height: 40px;
+  line-height: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -681,7 +679,7 @@ a {
 }
 
 .modal-field {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-label {
@@ -708,10 +706,10 @@ a {
 }
 
 .modal-textarea {
+  line-height: 1.17;
   width: 360px;
   height: 120px;
   resize: none;
-  line-height: 1.17;
   background-color: transparent;
   padding: 8px 16px;
   outline: transparent;
@@ -750,8 +748,8 @@ a {
   border: 1px solid rgba(46, 47, 66, 0.4);
   width: 16px;
   height: 16px;
-  margin-right: 8px;
   display: inline-flex;
+  margin-right: 8px;
   align-items: center;
   justify-content: center;
   fill: transparent;
