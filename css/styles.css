@@ -527,18 +527,29 @@ a {
   margin-bottom: 16px;
 }
 
+.label-footer {
+}
+
 .footer-form {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 24px;
 }
+
 .footer-input {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
   height: 40px;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #ffffff;
   background-color: transparent;
-  margin-right: 16px;
 }
 
 .footer-input::placeholder {
@@ -583,6 +594,8 @@ a {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -602,28 +615,44 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 72px 24px 24px 24px;
   transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-open {
-  fill: #2e2f42;
-  border-radius: 100%;
-  stroke-width: 1px;
-  border: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
-  margin-left: auto;
-  margin-bottom: 24px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 16px;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-open:hover {
   background-color: #404bbf;
   fill: #fff;
 }
+
+.modal-open:focus {
+  background-color: #404bbf;
+  border: none;
+  fill: #ffffff;
+}
+.open-btn {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-text {
   font-weight: 500;
   font-size: 16px;
@@ -640,10 +669,10 @@ a {
   border-radius: 4px;
   width: 360px;
   height: 40px;
-  padding-left: 40px;
+  padding-left: 38px;
   background-color: transparent;
   outline: transparent;
-  transition: border-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+  ransition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -658,15 +687,17 @@ a {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  transition: fill 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-field {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-label {
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
@@ -690,6 +721,11 @@ a {
   width: 360px;
   height: 120px;
   resize: none;
+  line-height: 1.17;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  ransition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-textarea {
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -707,9 +743,12 @@ a {
   outline: transparent;
 }
 
+.modal-input-policy {
+  margin-bottom: 24px;
+}
 .label-check {
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: flex;
@@ -722,10 +761,13 @@ a {
   width: 16px;
   height: 16px;
   margin-right: 8px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check:checked + .label-check .check-icon {
@@ -743,29 +785,20 @@ a {
 }
 
 .input-btn {
-  font-weight: 500;
+  display: block;
+  margin-right: 96px;
+  margin-left: auto;
+  margin-top: 24px;
+  min-width: 169px;
+  height: 56px;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  text-align: center;
-  color: #fff;
-  border-radius: 4px;
-  padding: 16px 32px;
-  width: 169px;
-  height: 56px;
-  border: none;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
-    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  cursor: pointer;
   background-color: #4d5ae5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 24px;
-  margin-top: 24px;
-}
-
-.input-container-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
